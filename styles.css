@@ -1,13 +1,55 @@
-/*  your css code here. If applicable */
-div{
-	display:flex;
-	gap:2px;
-	height:100%;
-	border:2 px solid #3c3c3c;
-	
-}
+ * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-.img{
-	height:400px;
-	
-}
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      width: 90%;
+      max-width: 1200px;
+      gap: 10px;
+    }
+
+    .panel {
+      position: relative;
+      flex: 1;
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    .panel.active {
+      flex: 5; /* Expanded card */
+    }
+
+    .panel:not(.active) {
+      flex: 1; /* Shrunk card */
+    }
+
+    .img-text {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      padding: 20px;
+      text-shadow: 2px 2px 5px black;
+      text-align: center;
+      background: rgba(0,0,0,0.3);
+      width: 100%;
+    }
